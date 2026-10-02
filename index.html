@@ -44,13 +44,13 @@
   <section class="bg-gradient-to-b from-slate-950 via-slate-900 to-teal-950 text-white py-12 px-4 sm:px-6 lg:px-8 border-b border-teal-950/60">
     <div class="max-w-5xl mx-auto text-center space-y-4">
       <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-teal-500/10 border border-teal-400/20 text-teal-300 text-xs font-semibold tracking-wide">
-        醫材專用倉儲 • 專屬主位與動態備存 • 四階空間健康度整頓
+        醫材專用倉儲 • 專屬主位與動態備存 • 五階空間健康度整頓
       </div>
       <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
         MegaView 醫材儲位與空間健康度作業指引
       </h1>
       <p class="text-sm sm:text-base text-slate-300 max-w-3xl mx-auto leading-relaxed">
-        本手冊專為倉儲現場同仁、庫管幹部與物流主管編寫。透過圖文步驟與清晰原則，說明儲位生成、庫存修正、空間整頓四步驟與指引單閱讀方式，協助您輕鬆管理庫房。
+        本手冊專為倉儲現場同仁、庫管幹部與物流主管編寫。透過圖文步驟與清晰原則，說明儲位生成、庫存修正、空間整頓五大步驟、多餘主位與唯一主位釋放流程，協助您輕鬆管理庫房。
       </p>
     </div>
   </section>
@@ -76,7 +76,7 @@
             <span class="text-xs font-bold text-teal-700">步驟 1 • 下載規則範本</span>
             <h4 class="font-bold text-slate-800 text-base">產出儲位規則表</h4>
             <p class="text-xs text-slate-600 leading-relaxed">
-              點擊主畫面工具列的「下載儲位生成範本」。若資料庫內已有儲位，系統會自動反推目前的貨架設定；若尚無資料，則會產生標準範本供填寫。
+              點擊主畫面工具列的「下載儲位生成規則」。若資料庫內已有儲位，系統會自動反推目前的貨架設定；若尚無資料，則會產生標準範本供填寫。
             </p>
           </div>
 
@@ -98,107 +98,117 @@
         </div>
 
         <!-- 儲位屬性介紹 -->
-        <div class="pt-4 border-t border-slate-100 space-y-3">
-          <h4 class="font-bold text-slate-800 text-sm">各儲位屬性用途說明：</h4>
-          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 text-xs">
-            <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
-              <span class="font-bold text-teal-800 block text-sm">專屬主位 (P 區)</span>
-              <p class="text-slate-500 mt-1">主要商品的固定揀貨位，位在黃金高度，出貨時第一優先由這裡拿取。</p>
+        <div class="border-t border-slate-100 pt-5">
+          <h4 class="font-bold text-slate-900 text-sm mb-3">儲位屬性代碼對照表</h4>
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-xs">
+            <div class="p-3 rounded-lg bg-teal-50 border border-teal-200 text-teal-900">
+              <span class="font-bold block text-sm">P (Primary)</span>
+              <span>專屬主揀位</span>
             </div>
-            <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
-              <span class="font-bold text-amber-800 block text-sm">備存溢流位 (O 區 / H 區)</span>
-              <p class="text-slate-500 mt-1">大量進貨放不下時的備用儲格，位在高樓層，整箱整批存放，不出散貨。</p>
+            <div class="p-3 rounded-lg bg-indigo-50 border border-indigo-200 text-indigo-900">
+              <span class="font-bold block text-sm">F (Special)</span>
+              <span>特殊主揀位</span>
             </div>
-            <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
-              <span class="font-bold text-rose-800 block text-sm">退貨專區 (R 區)</span>
-              <p class="text-slate-500 mt-1">不良品、待退廠品專用區域，嚴禁與一般進出貨庫存混放。</p>
+            <div class="p-3 rounded-lg bg-blue-50 border border-blue-200 text-blue-900">
+              <span class="font-bold block text-sm">O (Overflow)</span>
+              <span>良品溢流備存位</span>
             </div>
-            <div class="p-3 rounded-lg border border-slate-200 bg-slate-50">
-              <span class="font-bold text-indigo-800 block text-sm">進貨暫存區 (T 區)</span>
-              <p class="text-slate-500 mt-1">剛到貨尚未驗收時的臨時卸貨置放區。</p>
+            <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900">
+              <span class="font-bold block text-sm">H (Hold)</span>
+              <span>良品高架溢流位</span>
+            </div>
+            <div class="p-3 rounded-lg bg-rose-50 border border-rose-200 text-rose-900">
+              <span class="font-bold block text-sm">R (Return)</span>
+              <span>不良退貨專區</span>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-100 border border-slate-300 text-slate-800">
+              <span class="font-bold block text-sm">T (Temp)</span>
+              <span>盤點待整暫存區</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 模組 2: 儲位修正與異動 -->
+    <!-- 模組 2: 儲位修正與手動異動 -->
     <section id="section-ops" class="scroll-mt-20 space-y-5">
       <div class="flex items-center gap-3">
         <div class="p-2 bg-blue-100 rounded-lg text-blue-700">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
         </div>
         <div>
-          <h2 class="text-2xl font-bold text-slate-900">二、儲位修正、退倉與報廢操作</h2>
-          <p class="text-sm text-slate-500">現場搬遷、不良品退回原廠、破損品報廢與儲位分割管理</p>
+          <h2 class="text-2xl font-bold text-slate-900">二、儲位修正與退倉異動通道</h2>
+          <p class="text-sm text-slate-500">現場應急調整、退廠、移儲、報廢與手動扣帳，嚴格遵循三不原則</p>
         </div>
       </div>
 
       <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm space-y-6">
-        <p class="text-sm text-slate-600 leading-relaxed">
-          點擊主畫面工具列的「儲位異動與退倉」，可隨時進行庫存微調與移位。此功能直接調整實際在席數量，不產生揀貨單，也不會佔用銷售可用量：
-        </p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 text-xs">
-          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
-            <span class="px-2 py-0.5 rounded bg-blue-100 text-blue-800 font-bold">1. 退廠</span>
-            <div class="font-bold text-slate-800 text-sm mt-1">退還供應商</div>
-            <p class="text-slate-500">將不良品或待維修品自退貨專區移出出庫，扣減儲位數量並留下完整歷程。</p>
-          </div>
-
-          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
-            <span class="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-bold">2. 移儲</span>
-            <div class="font-bold text-slate-800 text-sm mt-1">跨儲位搬遷</div>
-            <p class="text-slate-500">將貨品從原來的位置搬到新位置，系統自動減少原儲位數量並增加新儲位數量。</p>
-          </div>
-
-          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
-            <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">3. 報廢</span>
-            <div class="font-bold text-slate-800 text-sm mt-1">過期損耗銷帳</div>
-            <p class="text-slate-500">過期品、破損試劑直接出庫除帳，扣減在席庫存並標記為報廢。</p>
-          </div>
-
-          <div class="p-4 rounded-xl border border-slate-200 bg-slate-50 space-y-1.5">
-            <span class="px-2 py-0.5 rounded bg-slate-200 text-slate-800 font-bold">4. 手動扣帳</span>
-            <div class="font-bold text-slate-800 text-sm mt-1">盤點微幅差額</div>
-            <p class="text-slate-500">定期盤點發現細微數量差異時，可直接手動扣減微調。</p>
-          </div>
+        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 space-y-1">
+          <span class="font-bold text-sm block">現場作業鐵律：三不原則</span>
+          <p>手動儲位作業為盤差微調與退廠應急通道，<strong>絕對不更動儲位型號綁定、絕對不更改法定主位戶長、絕對不自動發動整頓縮格</strong>。所有的儲位結構整理與空間回收，一律交由「空間健康度整頓」統籌執行。</p>
         </div>
 
-        <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-900 leading-relaxed">
-          <strong>現場儲位分割注意事項：</strong> 當現場進行實體貨架隔板改裝，將原本的一大格切分成兩小格時，原儲位上的貨品可能會超出新儲位的上限。這時請直接執行下方的「空間健康度整頓」，系統會自動進行第一步超載疏解，將多出的貨量移入隔壁空位。
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-xs">
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-800 text-sm">1. 退廠作業 (RTV)</span>
+            <p class="text-slate-600 leading-relaxed">
+              當貨品需退還廠商時使用。系統扣減來源儲位數量，記錄出庫流水，保留原儲位綁定。
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-800 text-sm">2. 庫內移儲 (Transfer)</span>
+            <p class="text-slate-600 leading-relaxed">
+              現場搬運移位使用。扣減來源儲位、增加目標儲位，不產生揀貨單，不鎖定庫存。
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-800 text-sm">3. 報廢除帳 (Scrap)</span>
+            <p class="text-slate-600 leading-relaxed">
+              過期或破損品項報廢。儲位數量直接扣減歸零，流水標註「報廢」。
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2">
+            <span class="font-bold text-slate-800 text-sm">4. 手動扣帳 (Adjustment)</span>
+            <p class="text-slate-600 leading-relaxed">
+              盤差微調通道。純扣減差異件數，確保帳物一致。
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- 模組 3: 空間健康度整頓 (四步驟) -->
+    <!-- 模組 3: 空間健康度整頓 (五步驟與雙軌釋放) -->
     <section id="section-health" class="scroll-mt-20 space-y-5">
       <div class="flex items-center gap-3">
         <div class="p-2 bg-emerald-100 rounded-lg text-emerald-700">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
         </div>
         <div>
-          <h2 class="text-2xl font-bold text-slate-900">三、空間健康度整頓作業（四階調度流程）</h2>
-          <p class="text-sm text-slate-500">超載疏解 • 主位互併濃縮 • 備存前推回填 • 空置主位釋放</p>
+          <h2 class="text-2xl font-bold text-slate-900">三、空間健康度整頓作業（五階調度與儲位釋放）</h2>
+          <p class="text-sm text-slate-500">超載疏解 • 主位互併濃縮 • 備存前推回填 • 多餘主位釋放 • 唯一主位受控解綁</p>
         </div>
       </div>
 
       <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm space-y-6">
         <p class="text-sm text-slate-600 leading-relaxed">
-          庫房經過頻繁進出貨後，經常出現主位空了、貨品堆在備存高樓層，或是同一型號分散在好幾個儲位的情況。點擊「空間健康度整頓」，系統會自動依照嚴謹的四個步驟依序處理：
+          庫房經過頻繁進出貨後，經常出現主位空了、貨品堆在備存高樓層，或是同一型號分散在好幾個儲位的情況。點擊「空間健康度整頓」，系統會自動依照嚴謹的調度邏輯進行診斷與建議：
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-4 text-xs">
+        <!-- 五步驟卡片 -->
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-xs">
           <!-- 步驟 1 -->
           <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 space-y-2 flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-2 text-indigo-700 font-bold mb-1">
+              <div class="flex items-center gap-1.5 text-indigo-700 font-bold mb-1">
                 <span class="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center text-xs">1</span>
                 <span>主位超載疏解</span>
               </div>
               <h5 class="font-bold text-slate-800 text-sm">大格超塞移隔壁</h5>
               <p class="text-slate-600 leading-relaxed mt-1">
-                若因儲位分割或進貨時超塞，導致單格貨量超出上限，系統會將多出來的數量，拆零平移到隔壁有缺額的專屬主位，消除現場超載危險。
+                若因儲位分割或進貨時超塞，導致單格貨量超出上限，系統會將多出的件數拆零平移到隔壁有缺額的主位。
               </p>
             </div>
             <span class="px-2 py-0.5 rounded bg-indigo-100 text-indigo-800 font-medium text-[11px] self-start mt-2">第一優先 • 消除超載</span>
@@ -207,28 +217,28 @@
           <!-- 步驟 2 -->
           <div class="p-4 rounded-xl bg-amber-50/60 border border-amber-200 space-y-2 flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-2 text-amber-800 font-bold mb-1">
+              <div class="flex items-center gap-1.5 text-amber-800 font-bold mb-1">
                 <span class="w-5 h-5 rounded-full bg-amber-100 flex items-center justify-center text-xs">2</span>
                 <span>主儲位互併濃縮 ★</span>
               </div>
               <h5 class="font-bold text-slate-800 text-sm">次位貨物合進主位</h5>
               <p class="text-slate-600 leading-relaxed mt-1">
-                如果同一個型號佔了 2 個以上的主位，系統會先檢視能不能把次要主位的貨全部合進法定主位。只要能<strong>百分之百搬空歸零</strong>，就會建議合併，將多餘主位騰空！
+                若同商品佔用多格主位，系統優先檢視能否合進法定主位。只要能<strong>100% 搬空歸零</strong>即發動合併，達成縮格。
               </p>
             </div>
-            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-medium text-[11px] self-start mt-2">第二優先 • 互驗互縮騰出空間</span>
+            <span class="px-2 py-0.5 rounded bg-amber-100 text-amber-800 font-medium text-[11px] self-start mt-2">第二優先 • 互縮騰出空間</span>
           </div>
 
           <!-- 步驟 3 -->
           <div class="p-4 rounded-xl bg-teal-50/60 border border-teal-200 space-y-2 flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-2 text-teal-800 font-bold mb-1">
+              <div class="flex items-center gap-1.5 text-teal-800 font-bold mb-1">
                 <span class="w-5 h-5 rounded-full bg-teal-100 flex items-center justify-center text-xs">3</span>
                 <span>備存溢流位回填</span>
               </div>
               <h5 class="font-bold text-slate-800 text-sm">高樓層整批補主位</h5>
               <p class="text-slate-600 leading-relaxed mt-1">
-                主位內部集中完畢後，系統由備存區將較早生產的批號前推回主位。堅持<strong>整批不拆散</strong>，且<strong>絕對不會補進剛騰空的主位</strong>，確保儲位能順利釋放。
+                由備存區將較早生產的批號前推回主位。堅持<strong>整批不拆散</strong>，且<strong>絕不回填剛騰空的儲格</strong>。
               </p>
             </div>
             <span class="px-2 py-0.5 rounded bg-teal-100 text-teal-800 font-medium text-[11px] self-start mt-2">第三順位 • 先進先出整批補貨</span>
@@ -237,23 +247,72 @@
           <!-- 步驟 4 -->
           <div class="p-4 rounded-xl bg-emerald-50/60 border border-emerald-200 space-y-2 flex flex-col justify-between">
             <div>
-              <div class="flex items-center gap-2 text-emerald-800 font-bold mb-1">
+              <div class="flex items-center gap-1.5 text-emerald-800 font-bold mb-1">
                 <span class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center text-xs">4</span>
-                <span>多餘主位解綁釋放</span>
+                <span>多餘主位釋放 (Tab 2)</span>
               </div>
-              <h5 class="font-bold text-slate-800 text-sm">騰空儲格歸還公用</h5>
+              <h5 class="font-bold text-slate-800 text-sm">騰空擴張格歸還公用</h5>
               <p class="text-slate-600 leading-relaxed mt-1">
-                搬遷完成後，已經變成 0 件的次要主位會出現在分頁二。經倉管同仁確認後，一鍵解除綁定，儲位立即重置回全庫公用池，供其他商品使用！
+                同商品佔多格且已騰空為 0 件的次要格。系統自動保護一格主位不斷代，<strong>預設全勾選</strong>，一鍵收回公用。
               </p>
             </div>
-            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-medium text-[11px] self-start mt-2">最終過帳 • 儲位資源回收</span>
+            <span class="px-2 py-0.5 rounded bg-emerald-100 text-emerald-800 font-medium text-[11px] self-start mt-2">日常整頓 • 預設全部勾選</span>
+          </div>
+
+          <!-- 步驟 5 -->
+          <div class="p-4 rounded-xl bg-rose-50/60 border border-rose-200 space-y-2 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1.5 text-rose-800 font-bold mb-1">
+                <span class="w-5 h-5 rounded-full bg-rose-100 flex items-center justify-center text-xs">5</span>
+                <span>唯一主位釋放 (Tab 3)</span>
+              </div>
+              <h5 class="font-bold text-slate-800 text-sm">停產品項手動解綁</h5>
+              <p class="text-slate-600 leading-relaxed mt-1">
+                全庫僅存這 1 格且已 0 件。專為<strong>停產/淘汰品項</strong>設計，<strong>預設全部不選</strong>，確認後生成取消 MGL 提報單。
+              </p>
+            </div>
+            <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-medium text-[11px] self-start mt-2">謹慎操作 • 預設全部不選</span>
           </div>
         </div>
 
-        <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1.5">
-          <div class="font-bold text-slate-800">操作小撇步：</div>
-          <p>• 移位清單支援即時搜尋：可直接輸入型號或品號快速篩選。</p>
-          <p>• 支援快捷複製：清單內容可直接單格雙擊複製，或是按鍵盤快捷鍵快速複製到剪貼簿，方便貼入其他文件比對。</p>
+        <!-- 釋放儲位雙分頁對照指南 -->
+        <div class="border-t border-slate-100 pt-5 space-y-4">
+          <h4 class="font-bold text-slate-900 text-sm">【儲位釋放】分頁二與分頁三之作業指南</h4>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+            <div class="p-4 rounded-xl border border-emerald-300 bg-emerald-50/40 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-emerald-900 text-sm">🧹 分頁 2：多餘主位釋放清單</span>
+                <span class="px-2 py-0.5 rounded bg-emerald-200 text-emerald-900 font-bold">日常維護 • 預設全選</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                • <strong>適用對象：</strong>同一個商品型號因為之前進貨量大佔了 2 格以上主位，現在次要儲位已經賣空或被整併清空。<br>
+                • <strong>防呆機制：</strong>系統會自動為該商品保留 1 格有貨或法定之主儲位，絕對不會讓商品失去戶長。<br>
+                • <strong>操作方式：</strong>清單預設已經全部打勾，點擊「執行選取主位釋放」即可將多出來的空位收回給其他商品使用。
+              </p>
+            </div>
+
+            <div class="p-4 rounded-xl border border-rose-300 bg-rose-50/40 space-y-2">
+              <div class="flex items-center justify-between">
+                <span class="font-bold text-rose-900 text-sm">⚠️ 分頁 3：唯一主位釋放清單</span>
+                <span class="px-2 py-0.5 rounded bg-rose-200 text-rose-900 font-bold">淘汰品專用 • 預設不選</span>
+              </div>
+              <p class="text-slate-700 leading-relaxed">
+                • <strong>適用對象：</strong>該型號在倉內<strong>只有這唯一 1 格主位</strong>，且在席件數已經為 0 件。<br>
+                • <strong>嚴格時機：</strong>僅限於該商品<strong>確定停產、下市或未來永久不再進貨</strong>，現場欲徹底回收儲格時使用。<br>
+                • <strong>防呆機制：</strong>此分頁<strong>預設全部不打勾</strong>。點擊釋放時會彈出高風險確認對話框，避免誤點。<br>
+                • <strong>自動產單：</strong>執行釋放後，系統會將該儲格清空為自由儲格，並<strong>自動在桌面生成《取消MGL儲位綁定提報單.xlsx》</strong>，請將檔案交給系統負責人向韓國 MGL 系統申請刪除對照。
+              </p>
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-lg bg-amber-50 border border-amber-200 text-xs text-amber-900 flex items-start gap-2">
+            <span class="text-base leading-none">💡</span>
+            <p>
+              <strong>現場溫馨提醒（暫時缺貨的商品千萬別放！）：</strong><br>
+              若某個品項只是暫時賣完、未來還會進貨，<strong>請絕對不要在分頁 3 勾選釋放</strong>！保留該儲位綁定，新貨進來時才能精準回到專屬位置；一旦誤釋放，下次進貨就必須重新向韓國申請新品綁定手續。
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -265,21 +324,17 @@
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
         </div>
         <div>
-          <h2 class="text-2xl font-bold text-slate-900">四、如何閱讀《儲位優化指引單》</h2>
-          <p class="text-sm text-slate-500">專為現場作業設計的專屬列印試算表，一眼辨識目標位置與擺放順序</p>
+          <h2 class="text-2xl font-bold text-slate-900">四、現場指引單與提報單閱讀說明</h2>
+          <p class="text-sm text-slate-500">專為現場作業與跨國系統對接設計的專屬列印試算表</p>
         </div>
       </div>
 
       <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm space-y-6">
-        <p class="text-sm text-slate-600 leading-relaxed">
-          點擊「匯出儲位優化指引單至桌面」，系統會產生一份包含三個工作表的標準報表：
-        </p>
-
         <div class="space-y-4">
-          <!-- Sheet 1 -->
+          <!-- Guide 1 -->
           <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2 text-xs">
             <div class="flex items-center justify-between">
-              <span class="font-bold text-slate-900 text-sm">第一頁：儲位配賦指引單（現場搬運專用）</span>
+              <span class="font-bold text-slate-900 text-sm">📄 儲位配賦指引單（現場搬運專用）</span>
               <span class="px-2 py-0.5 rounded bg-rose-100 text-rose-800 font-bold">16號粗體紅字</span>
             </div>
             <p class="text-slate-600 leading-relaxed">
@@ -288,19 +343,22 @@
             </p>
           </div>
 
-          <!-- Sheet 2 -->
+          <!-- Guide 2 -->
           <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2 text-xs">
-            <span class="font-bold text-slate-900 text-sm">第二頁：分割概況</span>
+            <span class="font-bold text-slate-900 text-sm">📊 韓國 MGL 儲位異動提報單（僅列變更項目）</span>
             <p class="text-slate-600 leading-relaxed">
-              彙整前後分割、左右分割與效期分割的統計卡片與詳細明細，供管理幹部掌握實體改裝後的空間使用情況。
+              <strong>只列出有變更的項目：</strong> 在匯出《儲位優化指引單》時一併產出。若全庫型號主位皆未異動，第一行會顯示「全庫型號專屬主位皆維持現狀，無需異動系統」的提示，乾淨清爽，徹底免去主管審查數百行無效資料的困擾。
             </p>
           </div>
 
-          <!-- Sheet 3 -->
-          <div class="p-5 rounded-xl border border-slate-200 bg-slate-50 space-y-2 text-xs">
-            <span class="font-bold text-slate-900 text-sm">第三頁：韓國總公司系統儲位異動提報單</span>
-            <p class="text-slate-600 leading-relaxed">
-              <strong>只列出有變更的項目：</strong> 若全庫型號主位皆未異動，第一行會顯示「全庫型號專屬主位皆維持現狀，無需異動系統」的提示，乾淨清爽，徹底免去主管審查數百行無效資料的困擾。
+          <!-- Guide 3 -->
+          <div class="p-5 rounded-xl border border-rose-200 bg-rose-50/40 space-y-2 text-xs">
+            <div class="flex items-center justify-between">
+              <span class="font-bold text-rose-900 text-sm">📑 取消 MGL 儲位綁定提報單（唯一主位釋放專用）</span>
+              <span class="px-2 py-0.5 rounded bg-rose-200 text-rose-900 font-bold">自動產出至桌面</span>
+            </div>
+            <p class="text-slate-700 leading-relaxed">
+              <strong>格式對齊新品提報單：</strong> 在「唯一主位釋放清單（Tab 3）」確認執行後自動產生。表格內將新 MGL 儲位以紅色粗體標註 <strong>(取消綁定/清空)</strong>，清楚列出已下市品項的原 MGL 儲位與內部代碼，供管理幹部直接轉發韓國總公司完成系統刪除。
             </p>
           </div>
         </div>
@@ -371,12 +429,12 @@
 
       <div class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-sm space-y-4">
         <p class="text-sm text-slate-600 leading-relaxed">
-          系統在每次執行關鍵作業（如匯入進貨、生成儲位、執行空間整頓過帳）前，都會自動在背景建立還原快照，完全不需手動操作。
+          系統在每次執行關鍵作業（如匯入進貨、生成儲位、執行空間整頓移位或主位釋放）前，都會自動在背景建立還原快照，完全不需手動操作。
         </p>
         <div class="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 space-y-2">
           <div class="font-bold text-slate-800 text-sm">如何執行還原？</div>
           <p>1. 在系統主畫面右上角，找到「快照備份」下拉選單。</p>
-          <p>2. 選取您想要還原的時間點（選單會列出日期、時間與當初執行的動作名稱）。</p>
+          <p>2. 選取您想要還原的時間點（選單會列出日期、時間與當初執行的動作名稱，例如「唯一主位釋放前自保」）。</p>
           <p>3. 點擊旁邊的「執行還原」，系統會立即將資料庫恢復到該時間點的狀態，安全無憂。</p>
         </div>
       </div>
